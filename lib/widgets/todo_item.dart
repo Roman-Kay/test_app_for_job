@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 
 class TodoItem extends StatefulWidget {
-  const TodoItem({Key? key}) : super(key: key);
+  TodoItem({Key? key}) : super(key: key);
 
   @override
   _TodoItemState createState() => _TodoItemState();
@@ -12,7 +12,7 @@ class TodoItem extends StatefulWidget {
 class _TodoItemState extends State<TodoItem> {
   bool isDone = false;
   TextEditingController todoController = TextEditingController(text: "");
-  FocusNode focusNode = FocusNode();
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -45,7 +45,7 @@ class _TodoItemState extends State<TodoItem> {
             const SizedBox(width: 10),
             Expanded(
                 child: TextFormField(
-                    focusNode: focusNode,
+                    autofocus: true,
                     controller: todoController,
                     onChanged: (value) {
                       setState(() {});

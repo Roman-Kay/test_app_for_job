@@ -85,8 +85,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       Expanded(
                         child: ListView(
                           shrinkWrap: true,
-                          children:
-                              todos.map((item) => const TodoItem()).toList(),
+                          children: todos.map((item) => TodoItem()).toList(),
                         ),
                       ),
                     ],
