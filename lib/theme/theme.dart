@@ -14,6 +14,8 @@ class MyTheme {
     cardColor: const Color(0xffDADADA),
     textSelectionColor: const Color(0xff575767),
     hintColor: const Color(0xff000000),
+    accentColor: const Color(0xffFCFCFC),
+    hoverColor: const Color(0xffF8F8F8),
   );
   static final darkTheme = ThemeData(
     brightness: Brightness.dark,
@@ -25,5 +27,7 @@ class MyTheme {
     cardColor: const Color(0xff0E0E11),
     textSelectionColor: const Color(0xffDADADA),
     hintColor: const Color(0xffFFFFFF),
+    accentColor: const Color(0xff2B2D37),
+    hoverColor: const Color(0xff262933),
   );
 }

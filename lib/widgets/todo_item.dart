@@ -31,7 +31,14 @@ class _TodoItemState extends State<TodoItem> {
                   height: 24,
                   width: 24,
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    gradient: LinearGradient(
+                      begin: Alignment.topRight,
+                      end: Alignment.bottomLeft,
+                      colors: [
+                        Theme.of(context).accentColor,
+                        Theme.of(context).hoverColor
+                      ],
+                    ),
                     borderRadius: BorderRadius.circular(5),
                     border: Border.all(color: Theme.of(context).cardColor),
                   ),
@@ -50,11 +57,14 @@ class _TodoItemState extends State<TodoItem> {
                     onChanged: (value) {
                       setState(() {});
                     },
-                    decoration: const InputDecoration(
+                    style: TextStyle(
+                      color: Theme.of(context).textSelectionColor,
+                    ),
+                    decoration: InputDecoration(
                       border: InputBorder.none,
                       hintText: "Add task...",
                       hintStyle: TextStyle(
-                        color: Colors.grey,
+                        color: Theme.of(context).textSelectionColor,
                       ),
                     ))),
           ],
